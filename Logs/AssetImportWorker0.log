@@ -15,11 +15,11 @@ C:/Users/Owner/TowerDeffence
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52219
+58327
 Successfully changed project path to: C:/Users/Owner/TowerDeffence
 C:/Users/Owner/TowerDeffence
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 214.24 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 62.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
@@ -35,37 +35,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56676
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007128 seconds.
+Registered in 0.005558 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 306.14 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 64.69 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 13.953 seconds
+- Completed reload, in  4.293 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.048622 seconds.
+Registered in 0.024741 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 117.32 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 251.43 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.477 seconds
+- Completed reload, in  7.520 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2107 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 93.9 MB.
-System memory in use after: 93.8 MB.
+System memory in use after: 93.9 MB.
 
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2543.
-Total: 11.264300 ms (FindLiveObjects: 0.342600 ms CreateObjectMapping: 0.130600 ms MarkObjects: 10.325400 ms  DeleteObjects: 0.463600 ms)
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2544.
+Total: 4.587900 ms (FindLiveObjects: 0.341900 ms CreateObjectMapping: 0.134100 ms MarkObjects: 3.888500 ms  DeleteObjects: 0.221400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -80,296 +80,232 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Texture/New Folder
-  artifactKey: Guid(0d96b092aa40a504ea6dfb3e102dc0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/New Folder using Guid(0d96b092aa40a504ea6dfb3e102dc0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7903538e9b7662bd8adfca8bd569a71') in 0.201271 seconds 
-  Import took 0.212793 seconds .
+  path: Assets/TileMap/Fields/Field_0.prefab
+  artifactKey: Guid(be8d0e7bbc20baa40af4c4952e6b0abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/Field_0.prefab using Guid(be8d0e7bbc20baa40af4c4952e6b0abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74e25a8e06f1f4cc83386b39ce25ecb7') in 0.157582 seconds 
+  Import took 0.168415 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.323681 seconds.
-  path: Assets/Texture/Field
-  artifactKey: Guid(0d96b092aa40a504ea6dfb3e102dc0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field using Guid(0d96b092aa40a504ea6dfb3e102dc0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14ab1c21ec64f096ccaa1ef69bf930d') in 0.023943 seconds 
-  Import took 0.030591 seconds .
+  Time since last request: 169.548324 seconds.
+  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_0.asset
+  artifactKey: Guid(e70f821bf325be840a551ee4ca38c214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_0.asset using Guid(e70f821bf325be840a551ee4ca38c214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '445535daaa37f2a66c65cb64803064fe') in 0.275691 seconds 
+  Import took 0.391238 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 500.342021 seconds.
-  path: Assets/Texture/Field/pipo-map001
-  artifactKey: Guid(0cb4554915040924fab614f3f072be80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001 using Guid(0cb4554915040924fab614f3f072be80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a01ab0377da893be3a703010ff1efe8') in 0.033919 seconds 
-  Import took 0.050468 seconds .
+  Time since last request: 0.000327 seconds.
+  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_4.asset
+  artifactKey: Guid(a201e0aef688f874285d5a04de672b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_4.asset using Guid(a201e0aef688f874285d5a04de672b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '794e5b3258e9fcb92ee411116c39bf7b') in 0.059202 seconds 
+  Import took 0.070132 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.971164 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001.png
-  artifactKey: Guid(3009b4276eecdfe43a093ddb47562a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001.png using Guid(3009b4276eecdfe43a093ddb47562a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56813fc2c20f8ffbcc41a1f043b1b31a') in 0.292677 seconds 
-  Import took 0.301911 seconds .
+  Time since last request: 0.000739 seconds.
+  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_1.asset
+  artifactKey: Guid(b7928591b2167fa4c949a7746e633763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_1.asset using Guid(b7928591b2167fa4c949a7746e633763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '927b80efcab45b53c2531b42ce981486') in 0.037032 seconds 
+  Import took 0.049260 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000399 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama2.png
-  artifactKey: Guid(a1fbaea2d38ae5b4aa5a90aef0ba0243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama2.png using Guid(a1fbaea2d38ae5b4aa5a90aef0ba0243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '754eafef64b2f7c17184db6f7b7ea507') in 0.030208 seconds 
-  Import took 0.037845 seconds .
+  Time since last request: 0.000363 seconds.
+  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_3.asset
+  artifactKey: Guid(5043620ab5b2a834a8212abe5ebe6da3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_3.asset using Guid(5043620ab5b2a834a8212abe5ebe6da3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2717fca0a9aa646209032952d10de6cb') in 0.044789 seconds 
+  Import took 0.052911 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000946 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama3.png
-  artifactKey: Guid(89eb3d6f374bf8c408e85b4b07bf3999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama3.png using Guid(89eb3d6f374bf8c408e85b4b07bf3999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46d0ae3a6d42cd935988d3371af3ae7f') in 0.043363 seconds 
-  Import took 0.054063 seconds .
+  Time since last request: 0.000314 seconds.
+  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_2.asset
+  artifactKey: Guid(ea52bc9812696fd4897418adb8d42cb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku_2.asset using Guid(ea52bc9812696fd4897418adb8d42cb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a58d1527cc7d103567913925fb3f21e6') in 0.029726 seconds 
+  Import took 0.042632 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.004739 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png
-  artifactKey: Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png using Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0292944db2c89fef4b844aa8bbd01ba7') in 0.032687 seconds 
-  Import took 0.048070 seconds .
+  Time since last request: 2.977509 seconds.
+  path: Assets/TileMap/Fields/Field_0.prefab
+  artifactKey: Guid(be8d0e7bbc20baa40af4c4952e6b0abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/Field_0.prefab using Guid(be8d0e7bbc20baa40af4c4952e6b0abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb43cb3f8e6b1dca7f54af6d2f05ed70') in 0.011404 seconds 
+  Import took 0.017762 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000986 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku.png
-  artifactKey: Guid(4fcdb49edef89994dbbf5db5d048840c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku.png using Guid(4fcdb49edef89994dbbf5db5d048840c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17e3b3541463ad67cd693b0fd3e8fc68') in 0.025263 seconds 
-  Import took 0.032726 seconds .
+  Time since last request: 0.000309 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-miti_0.asset
+  artifactKey: Guid(c37a19604af82e749add69a50f74cea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-miti_0.asset using Guid(c37a19604af82e749add69a50f74cea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '956c41c331f0a40d6a2e7b7255313524') in 0.024913 seconds 
+  Import took 0.031500 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000302 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png
-  artifactKey: Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png using Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0292944db2c89fef4b844aa8bbd01ba7') in 0.060406 seconds 
-  Import took 0.068882 seconds .
+  Time since last request: 0.000687 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-mori_1.asset
+  artifactKey: Guid(674182fc50c2b4b418a927fd1201c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-mori_1.asset using Guid(674182fc50c2b4b418a927fd1201c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be40a0b503986dd535718c061232b578') in 0.032851 seconds 
+  Import took 0.042202 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480
-  artifactKey: Guid(05a15b834295f65428c33663fce18839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480 using Guid(05a15b834295f65428c33663fce18839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '987339f24bb27898625323a9036558a1') in 0.012431 seconds 
-  Import took 0.017826 seconds .
+  Time since last request: 0.000266 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-mori_3.asset
+  artifactKey: Guid(5e005e1688c816940abf3a1bbefa1370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-mori_3.asset using Guid(5e005e1688c816940abf3a1bbefa1370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a82cfe5508e7366635fd24de0683e83') in 0.034276 seconds 
+  Import took 0.042577 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000808 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png
-  artifactKey: Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png using Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd42a9d54faf12c4aada2ec6d2afc13f') in 0.035179 seconds 
-  Import took 0.043016 seconds .
+  Time since last request: 0.000300 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-miti_4.asset
+  artifactKey: Guid(d858e8ffb505f2f45a86f0d2697430ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-miti_4.asset using Guid(d858e8ffb505f2f45a86f0d2697430ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b786b3d99ba5a999c1dca819a888374b') in 0.033010 seconds 
+  Import took 0.039631 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000969 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama1.png
-  artifactKey: Guid(c9fc754ac21a35644b232848c429fe96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama1.png using Guid(c9fc754ac21a35644b232848c429fe96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5210626e7f2d78415df205140114ea1a') in 0.038379 seconds 
-  Import took 0.046127 seconds .
+  Time since last request: 0.000292 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-mori_0.asset
+  artifactKey: Guid(748d0aebef541b64ca19ff49e0101f4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-mori_0.asset using Guid(748d0aebef541b64ca19ff49e0101f4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c95ee51fbfdcfefbc5a5a69dff1809de') in 0.028417 seconds 
+  Import took 0.039004 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000441 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-tuti.png
-  artifactKey: Guid(0f6be2d279a74094f938bd209174e334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-tuti.png using Guid(0f6be2d279a74094f938bd209174e334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e56d5ac4db0cd81284ae41c05ce569c5') in 0.033524 seconds 
-  Import took 0.042055 seconds .
+  Time since last request: 0.000367 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-miti_1.asset
+  artifactKey: Guid(eca3c910b4847e1418ebb1e155838aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-miti_1.asset using Guid(eca3c910b4847e1418ebb1e155838aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afac1134a9a71eda9675c067d23087e7') in 0.019322 seconds 
+  Import took 0.025835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-mori_2.asset
+  artifactKey: Guid(d4fa8c682814bab4c8afcd0cbfaadab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-mori_2.asset using Guid(d4fa8c682814bab4c8afcd0cbfaadab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1144d257e7e39c1f541902e473c3108b') in 0.024054 seconds 
+  Import took 0.036672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001050 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-mori_4.asset
+  artifactKey: Guid(270afaab7c4800e4fa529fc48fac57aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-mori_4.asset using Guid(270afaab7c4800e4fa529fc48fac57aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '139f4b3923fe907409b8cafef4f11ac5') in 0.022703 seconds 
+  Import took 0.032695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-miti_2.asset
+  artifactKey: Guid(ca1bccaba3e2fdf4c8582859da52747d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-miti_2.asset using Guid(ca1bccaba3e2fdf4c8582859da52747d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cafed415daee445632ee4e059a7ddd07') in 0.034398 seconds 
+  Import took 0.044506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000748 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-miti_3.asset
+  artifactKey: Guid(e95a7e26321e005429b86ca8a8e75e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-miti_3.asset using Guid(e95a7e26321e005429b86ca8a8e75e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a975eacd91d235804448d90b35899ff8') in 0.024247 seconds 
+  Import took 0.029544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 70.013095 seconds.
+  path: Assets/TileMap/Fields/Field_0.prefab
+  artifactKey: Guid(be8d0e7bbc20baa40af4c4952e6b0abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/Field_0.prefab using Guid(be8d0e7bbc20baa40af4c4952e6b0abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '696d38177d2861b81a1d1014a0440fa3') in 0.006677 seconds 
+  Import took 0.011728 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000376 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-umi.png
-  artifactKey: Guid(545adea6e84e1de4caf11236ea8f7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-umi.png using Guid(545adea6e84e1de4caf11236ea8f7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37d674cde188e1e852f9f7e3716aa59b') in 0.108313 seconds 
-  Import took 0.113989 seconds .
+  path: Assets/TileMap/Fields/pipo-map001_at-tuti_3.asset
+  artifactKey: Guid(254cb7531a574fb46aecafdd28dc2588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-tuti_3.asset using Guid(254cb7531a574fb46aecafdd28dc2588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a2cc383bdfbe459c3d2a170de7ae7f') in 0.023397 seconds 
+  Import took 0.030191 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 558.446307 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001.png
-  artifactKey: Guid(3009b4276eecdfe43a093ddb47562a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001.png using Guid(3009b4276eecdfe43a093ddb47562a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea0a552485f87e8e46e249afd82364b1') in 0.078270 seconds 
-  Import took 0.152579 seconds .
+  Time since last request: 0.000321 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-tuti_1.asset
+  artifactKey: Guid(45ee113700df7da4eb069496cd64dfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-tuti_1.asset using Guid(45ee113700df7da4eb069496cd64dfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6dbbe7d5bf05c7d8baa4c62b71e579') in 0.036280 seconds 
+  Import took 0.041294 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.680746 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001.png
-  artifactKey: Guid(3009b4276eecdfe43a093ddb47562a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001.png using Guid(3009b4276eecdfe43a093ddb47562a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '832b8caa668786fdd158fb717be7f249') in 0.154845 seconds 
-  Import took 0.164954 seconds .
+  Time since last request: 0.000335 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-tuti_0.asset
+  artifactKey: Guid(007838d887f442748a205f2e94cc7685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-tuti_0.asset using Guid(007838d887f442748a205f2e94cc7685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b2ce41b70d0674b82c29be2ba50e193') in 0.028310 seconds 
+  Import took 0.034328 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 54.960345 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png
-  artifactKey: Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png using Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '830eac332c0f148cac74517ce9b7b9da') in 0.022831 seconds 
-  Import took 0.029310 seconds .
+  Time since last request: 0.000234 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-tuti_4.asset
+  artifactKey: Guid(e28eab89c1e5d7d4d92bfd74d642c4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-tuti_4.asset using Guid(e28eab89c1e5d7d4d92bfd74d642c4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a84dbf856985496cc5c6a39c4263a96a') in 0.034944 seconds 
+  Import took 0.042747 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.232714 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png
-  artifactKey: Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png using Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e733eacff7836f9eeee03f7a0444da6a') in 0.020371 seconds 
-  Import took 0.028248 seconds .
+  Time since last request: 0.000525 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-tuti_2.asset
+  artifactKey: Guid(0c3f83a187e050b4cb96f89cb97774bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-tuti_2.asset using Guid(0c3f83a187e050b4cb96f89cb97774bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97e682978447d9adc34012f171ebc8cd') in 0.022778 seconds 
+  Import took 0.034418 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005352 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png
-  artifactKey: Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png using Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e733eacff7836f9eeee03f7a0444da6a') in 0.028268 seconds 
-  Import took 0.034139 seconds .
+  Time since last request: 43.228457 seconds.
+  path: Assets/TileMap/Fields/Field_0.prefab
+  artifactKey: Guid(be8d0e7bbc20baa40af4c4952e6b0abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/Field_0.prefab using Guid(be8d0e7bbc20baa40af4c4952e6b0abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e34d5c0c1c51367932d80d76c358cfe9') in 0.005763 seconds 
+  Import took 0.011918 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.483138 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku.png
-  artifactKey: Guid(4fcdb49edef89994dbbf5db5d048840c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku.png using Guid(4fcdb49edef89994dbbf5db5d048840c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33f13dca56d151c6cf06d369726fb500') in 0.021809 seconds 
-  Import took 0.028125 seconds .
+  Time since last request: 0.000334 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-umi_3.asset
+  artifactKey: Guid(67ed6bd6c5d0cdf4f82a636569094797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-umi_3.asset using Guid(67ed6bd6c5d0cdf4f82a636569094797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '252b4c2f767e259d1f5f80141229a55c') in 0.022541 seconds 
+  Import took 0.028058 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.008179 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku.png
-  artifactKey: Guid(4fcdb49edef89994dbbf5db5d048840c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-sabaku.png using Guid(4fcdb49edef89994dbbf5db5d048840c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33f13dca56d151c6cf06d369726fb500') in 0.024866 seconds 
-  Import took 0.033792 seconds .
+  Time since last request: 0.000226 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-umi_1.asset
+  artifactKey: Guid(41d1d0cfe68451d4095fb220d4f156c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-umi_1.asset using Guid(41d1d0cfe68451d4095fb220d4f156c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bbb53ee3c0f60478e43c197b8ba2111') in 0.027516 seconds 
+  Import took 0.039764 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.840533 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-tuti.png
-  artifactKey: Guid(0f6be2d279a74094f938bd209174e334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-tuti.png using Guid(0f6be2d279a74094f938bd209174e334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ae45a17046d9c22d1b195a59f483337') in 0.018126 seconds 
-  Import took 0.023952 seconds .
+  Time since last request: 0.000284 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-umi_4.asset
+  artifactKey: Guid(11ddb20397a8d7b4ab535097fcbf8d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-umi_4.asset using Guid(11ddb20397a8d7b4ab535097fcbf8d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d71852410767c2f5a4f6d78f0093308') in 0.025928 seconds 
+  Import took 0.033296 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.011931 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-tuti.png
-  artifactKey: Guid(0f6be2d279a74094f938bd209174e334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-tuti.png using Guid(0f6be2d279a74094f938bd209174e334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ae45a17046d9c22d1b195a59f483337') in 0.028901 seconds 
-  Import took 0.036144 seconds .
+  Time since last request: 0.000674 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-umi_2.asset
+  artifactKey: Guid(5c558ef32f0d1d3499afb76b185eace7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-umi_2.asset using Guid(5c558ef32f0d1d3499afb76b185eace7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2de1394dec81f61b00baff17e11cda6') in 0.033009 seconds 
+  Import took 0.041262 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.830122 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-umi.png
-  artifactKey: Guid(545adea6e84e1de4caf11236ea8f7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-umi.png using Guid(545adea6e84e1de4caf11236ea8f7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1f724c64b91768a17b1f58cea906ca5') in 0.022233 seconds 
-  Import took 0.026633 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003554 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-umi.png
-  artifactKey: Guid(545adea6e84e1de4caf11236ea8f7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-umi.png using Guid(545adea6e84e1de4caf11236ea8f7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1f724c64b91768a17b1f58cea906ca5') in 0.033120 seconds 
-  Import took 0.040161 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.622097 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama1.png
-  artifactKey: Guid(c9fc754ac21a35644b232848c429fe96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama1.png using Guid(c9fc754ac21a35644b232848c429fe96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69121a01d5b0f33e21d505ea0768237a') in 0.022650 seconds 
-  Import took 0.029219 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004682 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama1.png
-  artifactKey: Guid(c9fc754ac21a35644b232848c429fe96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama1.png using Guid(c9fc754ac21a35644b232848c429fe96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69121a01d5b0f33e21d505ea0768237a') in 0.027771 seconds 
-  Import took 0.033989 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.741344 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama2.png
-  artifactKey: Guid(a1fbaea2d38ae5b4aa5a90aef0ba0243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama2.png using Guid(a1fbaea2d38ae5b4aa5a90aef0ba0243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e1c997a32b83d27493f8c7befec62eb') in 0.018666 seconds 
-  Import took 0.024994 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007869 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama2.png
-  artifactKey: Guid(a1fbaea2d38ae5b4aa5a90aef0ba0243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama2.png using Guid(a1fbaea2d38ae5b4aa5a90aef0ba0243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e1c997a32b83d27493f8c7befec62eb') in 0.025614 seconds 
-  Import took 0.032684 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.350883 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama3.png
-  artifactKey: Guid(89eb3d6f374bf8c408e85b4b07bf3999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama3.png using Guid(89eb3d6f374bf8c408e85b4b07bf3999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb96039e14413083fd31025278d1f65') in 0.021611 seconds 
-  Import took 0.029099 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003749 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama3.png
-  artifactKey: Guid(89eb3d6f374bf8c408e85b4b07bf3999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-yama3.png using Guid(89eb3d6f374bf8c408e85b4b07bf3999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb96039e14413083fd31025278d1f65') in 0.030579 seconds 
-  Import took 0.036791 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 49.942249 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001.tile
-  artifactKey: Guid(88ef24007fa2f324d98cb43c6e17e38d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001.tile using Guid(88ef24007fa2f324d98cb43c6e17e38d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f061c3ea4f4f0ddddc636a21ea7969d6') in 0.021076 seconds 
-  Import took 0.028456 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 85.448982 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png
-  artifactKey: Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png using Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b74b92d4541fcfe8504a942056a55d76') in 0.021354 seconds 
-  Import took 0.028306 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.813371 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png
-  artifactKey: Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png using Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfc0a8936cd62ddb3bd3978b36c59125') in 0.039039 seconds 
-  Import took 0.045599 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.163230 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png
-  artifactKey: Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-miti.png using Guid(051958ea8a923ec4484cfb2294111736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5e70fc7e59e5971c2a5a0bbaa1f2dc3') in 0.037560 seconds 
-  Import took 0.045310 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 63.468372 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png
-  artifactKey: Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png using Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dd22a4bf7daf0d9361f31b95d6be855') in 0.017727 seconds 
-  Import took 0.026956 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 44.841326 seconds.
-  path: Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png
-  artifactKey: Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Texture/Field/pipo-map001/640x480/pipo-map001_at-mori.png using Guid(bf4e9ad2f1f35b3479ce16d5a9474185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92252a49eca7983ee9ee7287c480fa10') in 0.025710 seconds 
-  Import took 0.033656 seconds .
+  Time since last request: 0.000219 seconds.
+  path: Assets/TileMap/Fields/pipo-map001_at-umi_0.asset
+  artifactKey: Guid(6d1666ac47ca17e4686a1b456d96f689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Fields/pipo-map001_at-umi_0.asset using Guid(6d1666ac47ca17e4686a1b456d96f689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1886b2db9164e7199ed1c43b3d0a0093') in 0.023397 seconds 
+  Import took 0.029848 seconds .
 
