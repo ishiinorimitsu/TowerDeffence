@@ -8,6 +8,15 @@ TextureImporter:
   - first:
       213: -5729571779491720148
     second: pipo-map001_at-mori_1
+  - first:
+      213: -1501384301227748597
+    second: pipo-map001_at-mori_2
+  - first:
+      213: -7283700762704771992
+    second: pipo-map001_at-mori_3
+  - first:
+      213: 5196503789382930077
+    second: pipo-map001_at-mori_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,11 +123,11 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 95
-        width: 32
-        height: 62
+        width: 31
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 34, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -134,18 +143,81 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 66
         width: 32
-        height: 94
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 65, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: c241b48b2d87c70b0800000000000000
       internalID: -5729571779491720148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-map001_at-mori_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03d8f5cee20a2be0800000000000000
+      internalID: -1501384301227748597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-map001_at-mori_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8648dbc3fb81bea90800000000000000
+      internalID: -7283700762704771992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-map001_at-mori_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e04280aa0bd1840800000000000000
+      internalID: 5196503789382930077
       vertices: []
       indices: 
       edges: []
