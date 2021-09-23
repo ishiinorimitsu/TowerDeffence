@@ -3077,6 +3077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charaPrefab: {fileID: 5022694318812211583, guid: d1697c8872a00074d84e0c31798e6eba, type: 3}
   grid: {fileID: 1818520637}
+  tileMap: {fileID: 1282756901}
 --- !u!4 &1517645129
 Transform:
   m_ObjectHideFlags: 0
