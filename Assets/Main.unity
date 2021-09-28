@@ -3199,6 +3199,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5272902199806427530, guid: 2e2eaa41b91b87c42a69f7ee43d84814, type: 3}
+      propertyPath: maxHp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272902199806427530, guid: 2e2eaa41b91b87c42a69f7ee43d84814, type: 3}
       propertyPath: pathData
       value: 
       objectReference: {fileID: 1152916144}

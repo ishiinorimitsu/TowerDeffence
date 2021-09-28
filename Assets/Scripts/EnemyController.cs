@@ -12,6 +12,14 @@ public class EnemyController : MonoBehaviour
     [SerializeField, Header("移動速度")]
     private float moveSpeed;
 
+    [SerializeField, Header("最大HP")]
+    private int maxHp; //HPの最大値
+
+    [SerializeField]
+    private int hp;  //現在のHP
+
+    private Tween tween;
+
     private Vector3[] paths;
 
     private Animator anim;
@@ -20,6 +28,8 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+        hp = maxHp;
+
         TryGetComponent(out anim);  //Animatorコンポーネントを取得してanimに代入
 
         // 移動する地点を取得するための配列の初期化
@@ -31,7 +41,7 @@ public class EnemyController : MonoBehaviour
             paths = pathData.pathTranArray.Select(x => x.position).ToArray();
         }
 
-        transform.DOPath(paths, 1000 / moveSpeed).SetEase(Ease.Linear).OnWaypointChange(ChangeAnimeDirection);
+        tween = transform.DOPath(paths, 1000 / moveSpeed).SetEase(Ease.Linear).OnWaypointChange(ChangeAnimeDirection);
     }
 
     // Update is called once per frame
@@ -56,37 +66,26 @@ public class EnemyController : MonoBehaviour
         // アニメーションの Palameter の値を更新し、移動アニメの BlendTree を制御して移動の方向と移動アニメを同期
         anim.SetFloat("X", direction.x);
         anim.SetFloat("Y", direction.y);
+    }
 
-        //if (transform.position.x < paths[index].x)
-        //{
-        //    anim.SetFloat("X", 0);
-        //    anim.SetFloat("Y", -1.0f); 
-        //    Debug.Log("左方向");
-        //}
-        //else if (transform.position.y > paths[index].y)
-        //{
-        //    anim.SetFloat("X", 0f);
-        //    anim.SetFloat("Y", 1.0f);
+    public void CulcDamage(int amount)
+    {
+        //Mathf.Clamp(制御したい数値,最小値,最大値);
+        hp = Mathf.Clamp(hp -= amount, 0, maxHp);
 
-        //    Debug.Log("上左向");
-        //}
-        //else if (transform.position.y < paths[index].y)
-        //{
-        //    anim.SetFloat("X", 0f);
-        //    anim.SetFloat("Y", -1.0f);
+        Debug.Log("残りHP:"+hp);
 
-        //    Debug.Log("下方向");
-        //}
-        //else
-        //{
-        //    anim.SetFloat("Y", 0f);
-        //    anim.SetFloat("X", 1.0f);
+        if(hp <= 0)
+        {
+            DestroyEnemy();
+        }
+    }
 
-        //    Debug.Log("右方向");
-        //}
+    public void DestroyEnemy()
+    {
+        tween.Kill();
 
-        // 現在の位置情報を保持
-        //currentPos = transform.position;
+        Destroy(gameObject);
     }
 }
 
