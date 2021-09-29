@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("aaa");
         hp = maxHp;
 
         TryGetComponent(out anim);  //Animatorコンポーネントを取得してanimに代入
