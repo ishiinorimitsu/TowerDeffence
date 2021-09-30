@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyGenerator: {fileID: 1381309480}
   isEnemyGenerate: 0
-  generateIntervalTime: 100
+  generateIntervalTime: 500
   generateEnemyCount: 0
   maxEnemyCount: 5
 --- !u!4 &30136060
@@ -983,6 +983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyControllerPrefab: {fileID: 5272902199806427530, guid: 2e2eaa41b91b87c42a69f7ee43d84814, type: 3}
   pathData: {fileID: 8974152008787458272, guid: 93fed3011c7bdf745917f968e62cd11a, type: 3}
+  pathLinePrefab: {fileID: 5427235525954282764, guid: c3047d3b577b4644992190b045528b7c, type: 3}
 --- !u!4 &1381309481
 Transform:
   m_ObjectHideFlags: 0
