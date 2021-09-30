@@ -9,7 +9,7 @@ public class EnemyGenerator : MonoBehaviour
     private EnemyController enemyControllerPrefab;
 
     [SerializeField]
-    private PathData pathData;
+    private PathData[] pathDatas;
 
     private GamaManager gameManager;
 
@@ -42,10 +42,12 @@ public class EnemyGenerator : MonoBehaviour
 
     public void GenerateEnemy()
     {
-        EnemyController enemyController = Instantiate(enemyControllerPrefab, pathData.generateTran.position, Quaternion.identity);
+        int randomValue = Random.Range(0, pathDatas.Length);
+
+        EnemyController enemyController = Instantiate(enemyControllerPrefab, pathDatas[randomValue].generateTran.position, Quaternion.identity);
 
         //移動する地点を取得
-        Vector3[] paths = pathData.pathTranArray.Select(x => x.position).ToArray();　　//抽出しただけではなく、配列にしないと使わない状態になってしまう。
+        Vector3[] paths = pathDatas[randomValue].pathTranArray.Select(x => x.position).ToArray();　　//抽出しただけではなく、配列にしないと使わない状態になってしまう。
 
         //敵キャラの初期設定をして一時停止しておく
         enemyController.SetUpEnemyController(paths);
