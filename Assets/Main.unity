@@ -982,7 +982,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyControllerPrefab: {fileID: 5272902199806427530, guid: 2e2eaa41b91b87c42a69f7ee43d84814, type: 3}
-  pathData: {fileID: 8974152008787458272, guid: 93fed3011c7bdf745917f968e62cd11a, type: 3}
+  pathDatas:
+  - {fileID: 8974152008787458272, guid: 93fed3011c7bdf745917f968e62cd11a, type: 3}
+  - {fileID: 340739815217286113, guid: e6d2fe9f560f9fe4bba78ed10270212b, type: 3}
+  - {fileID: 1459758946181771467, guid: 1c0f36c6d178f374c81edb10641466a0, type: 3}
+  - {fileID: 6497657373706943926, guid: 332f29554e473f641a4aaa56faa08878, type: 3}
   pathLinePrefab: {fileID: 5427235525954282764, guid: c3047d3b577b4644992190b045528b7c, type: 3}
 --- !u!4 &1381309481
 Transform:
