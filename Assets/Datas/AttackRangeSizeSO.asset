@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0db8c9d487e0d468a4a9d0881af118, type: 3}
   m_Name: AttackRangeSizeSO
   m_EditorClassIdentifier: 
-  attackRangeSizesList: []
+  attackRangeSizesList:
+  - attackRangeType: 0
+    size: {x: 2, y: 2}
+  - attackRangeType: 1
+    size: {x: 3, y: 3}
+  - attackRangeType: 0
+    size: {x: 4, y: 4}
