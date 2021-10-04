@@ -24,6 +24,8 @@ public class EnemyController : MonoBehaviour
 
     private Animator anim;
 
+    public int attackPower;
+
     //private Vector3 currentPos;  //“GƒLƒƒƒ‰‚ÌŒ»İ‚ÌˆÊ’u
 
     public void SetUpEnemyController(Vector3[] pathData)
