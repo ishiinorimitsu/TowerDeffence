@@ -78,6 +78,8 @@ public class EnemyController : MonoBehaviour
         {
             DestroyEnemy();
         }
+
+        StartCoroutine(WaitMove());
     }
 
     public void DestroyEnemy()
@@ -95,6 +97,15 @@ public class EnemyController : MonoBehaviour
     public void ResumeMove()
     {
         tween.Play();
+    }
+
+    private IEnumerator WaitMove()
+    {
+        tween.timeScale = 0.05f;
+
+        yield return new WaitForSeconds(0.5f);
+
+        tween.timeScale = 1.0f;
     }
 }
 
