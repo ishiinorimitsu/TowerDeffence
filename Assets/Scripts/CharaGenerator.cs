@@ -14,18 +14,33 @@ public class CharaGenerator : MonoBehaviour
     [SerializeField]
     private Tilemap tileMap;
 
+    [SerializeField]
+    private PlacementCharaSelectPopUp placementCharaSelectPopUpPrefab;　　　//　PlacementCharaSelectPopUp プレファブゲームオブジェクトをアサイン用
+
+    [SerializeField]
+    private Transform canvasTran;　　　　　　　　　　　　　　　　　　　　　 //　PlacementCharaSelectPopUp ゲームオブジェクトの生成位置の登録用
+
+    private PlacementCharaSelectPopUp placementCharaSelectPopUp;　　　　　　//　生成された PlacementCharaSelectPopUp ゲームオブジェクトを代入するための変数
+
+    private GameManager gameManager;
+
+
     private Vector3Int gridPos;  //タイルマップのタイルのセル座標の保持用
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        //マウスが押されてかつ配置キャラのポップアップが非表示状態なら
+        if (Input.GetMouseButtonDown(0) && !placementCharaSelectPopUp.gameObject.activeSelf)
         {
             gridPos = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));　　//マウスがある場所を取得し、それをタイルマップでいうとどこにあたるかの情報をgridPosに代入する。
             
             if(tileMap.GetColliderType(gridPos) == Tile.ColliderType.None)
             {
-                CreateChara(gridPos);
+                //CreateChara(gridPos);
+
+                //配置キャラを選択するポップアップを表示する
+                ActivatePlacementCharaSelectPopUp();
             }
         }
     }
@@ -38,5 +53,36 @@ public class CharaGenerator : MonoBehaviour
 
         // キャラの位置がタイルの左下を 0,0 として生成しているので、タイルの中央にくるように位置を調整
         chara.transform.position = new Vector2(chara.transform.position.x + 0.5f, chara.transform.position.y + 0.5f);  //キャラをセルの中央に配置する
+    }
+
+
+    public IEnumerator SetUpCharaGenerter(GameManager gameManager)
+    {
+        this.gameManager = gameManager;
+
+        yield return CreatePlacementCharaSetUpPopUp();
+    }
+
+    //配置キャラ選択用のポップアップの生成
+    public IEnumerator CreatePlacementCharaSetUpPopUp()
+    {
+        placementCharaSelectPopUp = Instantiate(placementCharaSelectPopUpPrefab, canvasTran, false);  //ポップアップを生成する
+
+        placementCharaSelectPopUp.SetUpPlacementCharaSelectPopUp(this);  //ポップアップの設定
+
+        placementCharaSelectPopUp.gameObject.SetActive(false);　//ポップアップを非表示
+
+        yield return null;
+    }
+    public void ActivatePlacementCharaSelectPopUp()
+    {
+        placementCharaSelectPopUp.gameObject.SetActive(true); //ポップアップを表示
+        placementCharaSelectPopUp.ShowPopUp();
+    }
+
+    public void InActivePlacementSelectPopUp()
+    {
+        //配置キャラ選択用のポップアップを非表示にする
+        placementCharaSelectPopUp.gameObject.SetActive(false);
     }
 }
