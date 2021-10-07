@@ -17,6 +17,7 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
     private CharaGenerator charaGenerator;
 
+    //他のスクリプトからここにいろいろな情報を送ってくる。
     public void SetUpPlacementCharaSelectPopUp(CharaGenerator charaGenerator)
     {
         this.charaGenerator = charaGenerator; 　　 //送られてきたcharaGeneratorの値をここでのharaGeneratorに入れる。
