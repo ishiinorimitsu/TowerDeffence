@@ -8,6 +8,8 @@ public class GamaManager : MonoBehaviour
     private EnemyGenerator enemyGenerator;
 
     [SerializeField]
+    private CharaGenerator charaGenerator;
+
     public bool isEnemyGenerate;  //¶¬‚·‚éswitchitrue‚¾‚Æ¶¬‚·‚é@false‚¾‚Æ¶¬’â~j
 
     public int generateIntervalTime;    //‰½•b‚¨‚«‚Éì‚é‚©
@@ -20,6 +22,8 @@ public class GamaManager : MonoBehaviour
     void Start()
     {
         isEnemyGenerate = true;  //¶¬‚Ì‹–‰Â
+
+        StartCoroutine(charaGenerator.SetUpCharaGenerter(this));
 
         StartCoroutine(enemyGenerator.PreparateEnemyGenerate(this));
     }
