@@ -62,6 +62,6 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
     public void HidePopUp()
     {
-        canvasGroup.DOFade(0, 0.5f).OnComplete(() => charaGenerator.InactivePlacementCharaSelectPopUp);
+        canvasGroup.DOFade(0, 0.5f).OnComplete(() => { charaGenerator.InActivePlacementSelectPopUp(); });
     }
 }

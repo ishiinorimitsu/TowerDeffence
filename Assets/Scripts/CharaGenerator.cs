@@ -15,14 +15,14 @@ public class CharaGenerator : MonoBehaviour
     private Tilemap tileMap;
 
     [SerializeField]
-    private PlacementCharaSelectPopUp placementCharaSelectPopUpPrefab;　　　//　PlacementCharaSelectPopUp プレファブゲームオブジェクトをアサイン用
+    private PlacemantCharaSelectPopUp placementCharaSelectPopUpPrefab;　　　//　PlacementCharaSelectPopUp プレファブゲームオブジェクトをアサイン用
 
     [SerializeField]
     private Transform canvasTran;　　　　　　　　　　　　　　　　　　　　　 //　PlacementCharaSelectPopUp ゲームオブジェクトの生成位置の登録用
 
-    private PlacementCharaSelectPopUp placementCharaSelectPopUp;　　　　　　//　生成された PlacementCharaSelectPopUp ゲームオブジェクトを代入するための変数
+    private PlacemantCharaSelectPopUp placementCharaSelectPopUp;　　　　　　//　生成された PlacementCharaSelectPopUp ゲームオブジェクトを代入するための変数
 
-    private GameManager gameManager;
+    private GamaManager gameManager;
 
 
     private Vector3Int gridPos;  //タイルマップのタイルのセル座標の保持用
@@ -56,7 +56,7 @@ public class CharaGenerator : MonoBehaviour
     }
 
 
-    public IEnumerator SetUpCharaGenerter(GameManager gameManager)
+    public IEnumerator SetUpCharaGenerter(GamaManager gameManager)
     {
         this.gameManager = gameManager;
 
