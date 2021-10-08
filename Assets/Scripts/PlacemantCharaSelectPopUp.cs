@@ -15,6 +15,36 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
     [SerializeField]
     private CanvasGroup canvasGroup;
 
+    [SerializeField]
+    private Image imgPickupChara;
+
+    [SerializeField]
+    private Text txtPickupCharaName;
+
+    [SerializeField]
+    private Text txtPickupCharaAttackPower;
+
+    [SerializeField]
+    private Text txtPickupCharaAttackRangeType;
+
+    [SerializeField]
+    private Text txtPickupCharaCost;
+
+    [SerializeField]
+    private Text txtPickupCharaMaxAttackCount;
+
+    [SerializeField]
+    private SelectCharaDetail selectCharaDetailPrefab;    //キャラを選択するボタン用のPrefabをアサインする。
+
+    [SerializeField]
+    private Transform selectCharaDetailTran;   //キャラのボタンを生成する位置をアサインする。
+
+    [SerializeField]
+    private List<SelectCharaDetail> selectCharaDetaislList = new List<SelectCharaDetail>();  //生成するキャラのボタンを管理する
+
+    [SerializeField]
+    private CharaData chooseCharaData;   //現在選択しているキャラの情報を管理する
+
     private CharaGenerator charaGenerator;
 
     //他のスクリプトからここにいろいろな情報を送ってくる。
@@ -30,6 +60,24 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
         //ボタンを押せなくする。
         SwitchActivateButton(false);
+
+        //スクリプタルオブジェクトに登録されているキャラ分のボタンを生成していく
+        for(int i = 0; i < haveCharaDataList.Count; i++)
+        {
+            //ボタンのゲームオブジェクトを作成する
+            SelectCharaDetail selectCharaDetail = Instantiate(selectCharaDetailPrefab, selectCharaDetailTran, false);
+
+            //ボタンのゲームオブジェクトの詳細（charaData）を設定していく
+            SelectCharaDetail.SetUpSelectCharaDetail(this.haveCharaDataList[i]);
+
+            //Listに追加する
+            selectCharaDetaislList.Add(selectCharaDetail);
+
+            if(i == 0)
+            {
+                SetSelectCharaDetail(haveCharaDataList[i]);
+            }
+        }
 
         //それぞれのボタンにメソッドを追加する。
         btnChooseChara.onClick.AddListener(OnClickSubmitChooseChara);
@@ -64,5 +112,22 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
     public void HidePopUp()
     {
         canvasGroup.DOFade(0, 0.5f).OnComplete(() => { charaGenerator.InActivePlacementSelectPopUp(); });
+    }
+
+    public void SetSelectCharaDetail(CharaData charaData)  //各値の設定
+    {
+        chooseCharaData = charaData;
+
+        imgPickupChara.sprite = charaData.charaSprite;
+
+        txtPickupCharaName.text = charaData.charaName;
+
+        txtPickupCharaAttackPower.text = charaData.attackPower.ToString();
+
+        txtPickupCharaAttackRangeType.text = charaData.attackRange.ToString();
+
+        txtPickupCharaCost.text = charaData.cost.ToString();
+
+        txtPickupCharaMaxAttackCount.text = charaData.maxAttackCount.ToString();
     }
 }
