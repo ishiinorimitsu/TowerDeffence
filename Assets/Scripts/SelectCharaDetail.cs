@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class SelectCharaDetail : MonoBehaviour
+public class SelectCharaDetail : MonoBehaviour　　//キャラを選択するボタンを管理するスクリプト
 {
     [SerializeField]
     private Button btnSelectCharaDetail;
@@ -29,6 +29,6 @@ public class SelectCharaDetail : MonoBehaviour
     // Start is called before the first frame update
     private void OnClickSelectCharaDetail()
     {
-        placementCharaSelectPop.SetUpSelectCharaDetail(charaData);
+        placementCharaSelectPop.SetSelectCharaDetail(charaData);
     }
 }
