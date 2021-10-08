@@ -48,7 +48,7 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
     private CharaGenerator charaGenerator;
 
     //他のスクリプトからここにいろいろな情報を送ってくる。
-    public void SetUpPlacementCharaSelectPopUp(CharaGenerator charaGenerator)
+    public void SetUpPlacementCharaSelectPopUp(CharaGenerator charaGenerator,List<CharaData> haveCharaDataList)
     {
         this.charaGenerator = charaGenerator; 　　 //送られてきたcharaGeneratorの値をここでのharaGeneratorに入れる。
 
@@ -68,7 +68,7 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
             SelectCharaDetail selectCharaDetail = Instantiate(selectCharaDetailPrefab, selectCharaDetailTran, false);
 
             //ボタンのゲームオブジェクトの詳細（charaData）を設定していく
-            SelectCharaDetail.SetUpSelectCharaDetail(this.haveCharaDataList[i]);
+            SelectCharaDetail.SetUpSelectCharaDetail(this,haveCharaDataList[i]);
 
             //Listに追加する
             selectCharaDetaislList.Add(selectCharaDetail);
@@ -108,6 +108,7 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
     {
         HidePopUp();
     }
+
 
     public void HidePopUp()
     {
