@@ -66,6 +66,8 @@ public class CharaGenerator : MonoBehaviour
     {
         this.gameManager = gameManager;
 
+        CreateHaveCharaDatasList();
+
         yield return CreatePlacementCharaSetUpPopUp();
     }
 
