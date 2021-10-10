@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class CharaGenerator : MonoBehaviour
 {
     [SerializeField]
-    private GameObject charaPrefab;   //キャラクターのプレファブを登録する
+    private CharaController charaControllerPrefab;
 
     [SerializeField]
     private Grid grid;   //タイルマップの座標を取得するためのモノ。Grid＿BaseがわのGrid を指定する。
@@ -49,17 +49,17 @@ public class CharaGenerator : MonoBehaviour
         }
     }
 
-    private void CreateChara(Vector3Int gridPos)
-    {
+    //private void CreateChara(Vector3Int gridPos)
+    //{
 
-        // タップした位置にキャラを生成して配置
-        GameObject chara = Instantiate(charaPrefab, gridPos, Quaternion.identity);  //キャラを指定した場所に生成する
+    //    // タップした位置にキャラを生成して配置
+    //    GameObject chara = Instantiate(charaPrefab, gridPos, Quaternion.identity);  //キャラを指定した場所に生成する
 
-        // キャラの位置がタイルの左下を 0,0 として生成しているので、タイルの中央にくるように位置を調整
-        chara.transform.position = new Vector2(chara.transform.position.x + 0.5f, chara.transform.position.y + 0.5f);  //キャラをセルの中央に配置する
+    //    // キャラの位置がタイルの左下を 0,0 として生成しているので、タイルの中央にくるように位置を調整
+    //    chara.transform.position = new Vector2(chara.transform.position.x + 0.5f, chara.transform.position.y + 0.5f);  //キャラをセルの中央に配置する
 
-        CreateHaveCharaDatasList();
-    }
+    //    CreateHaveCharaDatasList();
+    //}
 
 
     public IEnumerator SetUpCharaGenerter(GamaManager gameManager)
@@ -101,5 +101,18 @@ public class CharaGenerator : MonoBehaviour
         {
             charaDataList.Add(DataBaseManager.instance.charaDataSO.charaDataList[i]);
         }
+    }
+
+    public void CreateChooseChara(CharaData charaData)
+    {
+        //キャラをタップした位置に生成
+        CharaController chara = Instantiate(charaControllerPrefab, gridPos, Quaternion.identity);
+
+        //位置を中央に来るように設置
+        chara.transform.position = new Vector2(chara.transform.position.x + 0.5f, chara.transform.position.y + 0.5f);
+
+        chara.SetUpChara(charaData, gameManager);
+
+        Debug.Log(charaData.charaName);
     }
 }

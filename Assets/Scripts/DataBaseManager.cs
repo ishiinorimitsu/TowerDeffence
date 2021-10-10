@@ -6,6 +6,8 @@ public class DataBaseManager : MonoBehaviour
 
     public CharaDataSO charaDataSO;
 
+    public AttackRangeSizeSO attackRangeSizeSO;
+
     private void Awake()
     {
         if(instance == null)
@@ -17,5 +19,13 @@ public class DataBaseManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public Vector2 GetAttackRangeSize(AttackRangeType attackRangeType)
+    {
+        return attackRangeSizeSO.attackRangeSizesList.Find(x => x.attackRangeType == attackRangeType).size;  //Listの中から（）内のものを探す。
+        //Find()の文は、if(attackRangeSize.attackRangeType == attackRangeType) {
+                                 //return attackRangeType.size;
+                        //}と同じ。
     }
 }

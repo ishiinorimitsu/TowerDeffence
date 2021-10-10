@@ -6,6 +6,10 @@ using DG.Tweening;
 
 public class PlacemantCharaSelectPopUp : MonoBehaviour
 {
+    //ボタンを管理するリストはselectCharaDetailsList
+    //キャラを管理するのはこのスクリプトではhaveCharaDataList
+    //お互いのリスト内のインデックス番号で一致させている。
+
     [SerializeField]
     private Button btnClosePopUp;
 
@@ -40,7 +44,7 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
     private Transform selectCharaDetailTran;   //キャラのボタンを生成する位置をアサインする。
 
     [SerializeField]
-    private List<SelectCharaDetail> selectCharaDetaislList = new List<SelectCharaDetail>();  //生成するキャラのボタンを管理する
+    private List<SelectCharaDetail> selectCharaDetailslList = new List<SelectCharaDetail>();  //生成するキャラのボタンを管理する
 
     [SerializeField]
     private CharaData chooseCharaData;   //現在選択しているキャラの情報を管理する
@@ -77,7 +81,7 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
             selectCharaDetail.SetUpSelectCharaDetail(this,haveCharaDataList[i]);
 
             //Listに追加する
-            selectCharaDetaislList.Add(selectCharaDetail);
+            selectCharaDetailslList.Add(selectCharaDetail);
 
             if(i == 0)　　//初期値の設定
             {
@@ -107,6 +111,7 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
     public void OnClickSubmitChooseChara()
     {
+        charaGenerator.CreateChooseChara(chooseCharaData);
         HidePopUp();
     }
 

@@ -3273,7 +3273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24eec38dea7652f47a099f63af65699a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charaPrefab: {fileID: 5022694318812211583, guid: d1697c8872a00074d84e0c31798e6eba, type: 3}
+  charaControllerPrefab: {fileID: 5252063633589928260, guid: d1697c8872a00074d84e0c31798e6eba, type: 3}
   grid: {fileID: 1818520637}
   tileMap: {fileID: 1282756901}
   placementCharaSelectPopUpPrefab: {fileID: 8149454344975522518, guid: 562591fd5aad64d4b83edb8f147cb0d8, type: 3}
@@ -3447,3 +3447,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charaDataSO: {fileID: 11400000, guid: 868015ce00815734fabe86d01341282d, type: 2}
+  attackRangeSizeSO: {fileID: 11400000, guid: 70d2fe451fd166d42a118ec8de0e9342, type: 2}
