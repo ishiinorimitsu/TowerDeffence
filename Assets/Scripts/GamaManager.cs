@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GamaManager : MonoBehaviour
+public class GamaManager : MonoBehaviour   //“G‚Ì¶¬‚ğ‚Â‚©‚³‚Ç‚é
 {
     [SerializeField]
     private EnemyGenerator enemyGenerator;
@@ -39,11 +39,5 @@ public class GamaManager : MonoBehaviour
         {
             isEnemyGenerate = false;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

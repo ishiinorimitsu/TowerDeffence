@@ -9,13 +9,13 @@ C:\Program Files\Unity\Hub\Editor\2020.3.13f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker0
+AssetImportWorker3
 -projectPath
 C:/Users/Owner/TowerDeffence
 -logFile
-Logs/AssetImportWorker0.log
+Logs/AssetImportWorker3.log
 -srvPort
-54566
+60686
 Successfully changed project path to: C:/Users/Owner/TowerDeffence
 C:/Users/Owner/TowerDeffence
 Using Asset Import Pipeline V2.

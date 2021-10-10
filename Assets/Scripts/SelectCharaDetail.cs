@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class SelectCharaDetail : MonoBehaviour　　//キャラを選択するボタンを管理するスクリプト
+public class SelectCharaDetail : MonoBehaviour　　//キャラを選択する「ボタン」を管理するスクリプト
 {
     [SerializeField]
     private Button btnSelectCharaDetail;
@@ -12,7 +12,6 @@ public class SelectCharaDetail : MonoBehaviour　　//キャラを選択するボタンを管理
     [SerializeField]
     private Image imgChara;
 
-    [SerializeField]
     private PlacemantCharaSelectPopUp placementCharaSelectPop;
 
     private CharaData charaData;
@@ -23,6 +22,8 @@ public class SelectCharaDetail : MonoBehaviour　　//キャラを選択するボタンを管理
         this.charaData = charaData;
 
         imgChara.sprite = this.charaData.charaSprite;
+
+        Debug.Log("ここまでOK");  　　//ここまでもできていない=生成の場所とかではなく生成そのものができていない
 
         btnSelectCharaDetail.onClick.AddListener(OnClickSelectCharaDetail);
     }
