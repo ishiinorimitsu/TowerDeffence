@@ -49,7 +49,9 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
     //他のスクリプトからここにいろいろな情報を送ってくる。
     public void SetUpPlacementCharaSelectPopUp(CharaGenerator charaGenerator,List<CharaData> haveCharaDataList)　　//第一引数には「何を」生成しますか？　第二引数には「キャラが入っているリスト内の内容」がある。
-    {　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　//CharaGeneraterから送られてくる
+    {　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　//CharaGeneraterから送られてくる。このメソッドでボタンを作っている。
+        Debug.Log("SetUpPlacementCharaSelectPopUpまではOK");
+
         this.charaGenerator = charaGenerator; 　　
 
         //canvasGroupを一度見えない状態にしておく
@@ -60,6 +62,8 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
         //ボタンを押せなくする。
         SwitchActivateButton(false);
+
+        Debug.Log(haveCharaDataList.Count+"です。");
 
         //スクリプタルオブジェクトに登録されているキャラ分のボタンを生成していく
         for(int i = 0; i < haveCharaDataList.Count; i++)
