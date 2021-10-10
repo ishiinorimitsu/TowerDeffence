@@ -20,6 +20,9 @@ public class CharaGenerator : MonoBehaviour
     [SerializeField]
     private Transform canvasTran;　　　　　　　　　　　　　　　　　　　　　 //　PlacementCharaSelectPopUp ゲームオブジェクトの生成位置の登録用
 
+    [SerializeField, Header("キャラのデータリスト")]
+    private List<CharaData> charaDataList = new List<CharaData>();　　　　　//
+
     private PlacemantCharaSelectPopUp placementCharaSelectPopUp;　　　　　　//　生成された PlacementCharaSelectPopUp ゲームオブジェクトを代入するための変数
 
     private GamaManager gameManager;
@@ -41,6 +44,7 @@ public class CharaGenerator : MonoBehaviour
 
                 //配置キャラを選択するポップアップを表示する
                 ActivatePlacementCharaSelectPopUp();
+                Debug.Log("手順1");
             }
         }
     }
@@ -53,6 +57,8 @@ public class CharaGenerator : MonoBehaviour
 
         // キャラの位置がタイルの左下を 0,0 として生成しているので、タイルの中央にくるように位置を調整
         chara.transform.position = new Vector2(chara.transform.position.x + 0.5f, chara.transform.position.y + 0.5f);  //キャラをセルの中央に配置する
+
+        CreateHaveCharaDatasList();
     }
 
 
@@ -68,7 +74,7 @@ public class CharaGenerator : MonoBehaviour
     {
         placementCharaSelectPopUp = Instantiate(placementCharaSelectPopUpPrefab, canvasTran, false);  //ポップアップを生成する
 
-        placementCharaSelectPopUp.SetUpPlacementCharaSelectPopUp(this);  //ポップアップの設定
+        placementCharaSelectPopUp.SetUpPlacementCharaSelectPopUp(this,charaDataList);  //ポップアップの設定
 
         placementCharaSelectPopUp.gameObject.SetActive(false);　//ポップアップを非表示
 
@@ -84,5 +90,14 @@ public class CharaGenerator : MonoBehaviour
     {
         //配置キャラ選択用のポップアップを非表示にする
         placementCharaSelectPopUp.gameObject.SetActive(false);
+    }
+
+    private void CreateHaveCharaDatasList()   //このメソッドでキャラのデータをこのスクリプト内に取り込んでいる。
+    {
+        //CharaDataSO内のCharaDataを一つずつリストに追加
+        for(int i = 0; i < DataBaseManager.instance.charaDataSO.charaDataList.Count;i++)
+        {
+            charaDataList.Add(DataBaseManager.instance.charaDataSO.charaDataList[i]);
+        }
     }
 }

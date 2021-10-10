@@ -48,9 +48,9 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
     private CharaGenerator charaGenerator;
 
     //他のスクリプトからここにいろいろな情報を送ってくる。
-    public void SetUpPlacementCharaSelectPopUp(CharaGenerator charaGenerator,List<CharaData> haveCharaDataList)
-    {
-        this.charaGenerator = charaGenerator; 　　 //送られてきたcharaGeneratorの値をここでのharaGeneratorに入れる。
+    public void SetUpPlacementCharaSelectPopUp(CharaGenerator charaGenerator,List<CharaData> haveCharaDataList)　　//第一引数には「何を」生成しますか？　第二引数には「キャラが入っているリスト内の内容」がある。
+    {　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　//CharaGeneraterから送られてくる
+        this.charaGenerator = charaGenerator; 　　
 
         //canvasGroupを一度見えない状態にしておく
         canvasGroup.alpha = 0;
@@ -68,12 +68,12 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
             SelectCharaDetail selectCharaDetail = Instantiate(selectCharaDetailPrefab, selectCharaDetailTran, false);
 
             //ボタンのゲームオブジェクトの詳細（charaData）を設定していく
-            SelectCharaDetail.SetUpSelectCharaDetail(this,haveCharaDataList[i]);
+            selectCharaDetail.SetUpSelectCharaDetail(this,haveCharaDataList[i]);
 
             //Listに追加する
             selectCharaDetaislList.Add(selectCharaDetail);
 
-            if(i == 0)
+            if(i == 0)　　//初期値の設定
             {
                 SetSelectCharaDetail(haveCharaDataList[i]);
             }
@@ -117,9 +117,9 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
     public void SetSelectCharaDetail(CharaData charaData)  //各値の設定
     {
-        chooseCharaData = charaData;
+        chooseCharaData = charaData;　　　　　//今選んでいるキャラは、CharaDataの中のものです。
 
-        imgPickupChara.sprite = charaData.charaSprite;
+        imgPickupChara.sprite = charaData.charaSprite;　　　//今選んでいるキャラの中の絵は、CharaDataの中のCharaSpriteです。
 
         txtPickupCharaName.text = charaData.charaName;
 
