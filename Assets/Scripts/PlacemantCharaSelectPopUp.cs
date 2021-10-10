@@ -67,6 +67,8 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
             //ボタンのゲームオブジェクトを作成する
             SelectCharaDetail selectCharaDetail = Instantiate(selectCharaDetailPrefab, selectCharaDetailTran, false);
 
+            Debug.Log("OK!");
+
             //ボタンのゲームオブジェクトの詳細（charaData）を設定していく
             selectCharaDetail.SetUpSelectCharaDetail(this,haveCharaDataList[i]);
 
