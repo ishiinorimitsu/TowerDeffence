@@ -30,8 +30,14 @@ public class CharaController : MonoBehaviour　　　//設置したキャラの色々な情報を
 
     private GamaManager gamaManager;
 
-    [SerializeField]
-    private SpriteRenderer spriteRenderer;
+    //[SerializeField]
+    //private SpriteRenderer spriteRenderer;
+
+    private Animator anim;
+
+    private string overrideClipName = "Chara_0";    //上書きしていくAnimationClip。Prefabで作る最初のやつのmotionの名前を登録する。
+
+    private AnimatorOverrideController overrideController;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -119,12 +125,45 @@ public class CharaController : MonoBehaviour　　　//設置したキャラの色々な情報を
         UpdateDisplayAttackCount();
 
         // キャラ画像の設定。アニメを利用するようになったら、この処理はやらない
-        if (TryGetComponent(out spriteRenderer))
-        {
+        //if (TryGetComponent(out spriteRenderer))
+        //{
 
-            // 画像を配置したキャラの画像に差し替える
-            spriteRenderer.sprite = this.charaData.charaSprite;
-            Debug.Log("sprite-ok");
+        //    // 画像を配置したキャラの画像に差し替える
+        //    spriteRenderer.sprite = this.charaData.charaSprite;
+        //    Debug.Log("sprite-ok");
+        //}
+
+        Debug.Log(this.charaData.charaName);
+
+        SetUpAnimation();
+    }
+
+    private void SetUpAnimation()
+    {
+        if(TryGetComponent(out anim))
+        {
+            overrideController = new AnimatorOverrideController();
+
+            overrideController.runtimeAnimatorController = anim.runtimeAnimatorController;
+            anim.runtimeAnimatorController = overrideController;
+
+            AnimatorStateInfo[] layerInfo = new AnimatorStateInfo[anim.layerCount];
+
+            for (int i = 0; i < anim.layerCount; i++)
+            {
+                layerInfo[i] = anim.GetCurrentAnimatorStateInfo(i);
+            }
+
+            overrideController[overrideClipName] = this.charaData.charaAnim;
+
+            anim.runtimeAnimatorController = overrideController;
+
+            anim.Update(0.0f);
+
+            for (int i = 0; i < anim.layerCount; i++)
+            {
+                anim.Play(layerInfo[i].fullPathHash, i, layerInfo[i].normalizedTime);
+            }
         }
     }
 

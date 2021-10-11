@@ -22,6 +22,7 @@ MonoBehaviour:
     intervalAttackTime: 120
     maxAttackCount: 3
     discription: "\u5973\u6027\u306E\u9A0E\u58EB\u3002\u4E00\u756A\u30B3\u30B9\u30C8\u304C\u5B89\u304F\u3001\u624B\u8EFD\u306A\u30AD\u30E3\u30E9"
+    charaAnim: {fileID: 7400000, guid: 2bac6622dbaf683448bd882217decd2d, type: 2}
   - charaName: Female-Solidier
     charaNo: 1
     cost: 100
@@ -31,6 +32,7 @@ MonoBehaviour:
     intervalAttackTime: 200
     maxAttackCount: 100
     discription: "\u5973\u6226\u58EB\u3088\u308A\u3082\u653B\u6483\u529B\u304C\u9AD8\u304F\u30A4\u30F3\u30BF\u30FC\u30D0\u30EB\u304C\u9577\u304F\u3001\u30B3\u30B9\u30C8\u3082\u9AD8\u3044\u3002"
+    charaAnim: {fileID: 7400000, guid: b29980ef9e151b446b3da5601c7d3a12, type: 2}
   - charaName: Male-Warrier
     charaNo: 2
     cost: 50
@@ -40,6 +42,7 @@ MonoBehaviour:
     intervalAttackTime: 150
     maxAttackCount: 3
     discription: "\u30B3\u30B9\u30C8\u30D1\u30D5\u30A9\u30FC\u30DE\u30F3\u30B9\u304C\u4E00\u756A\u3044\u3044\u3002\n\u3057\u304B\u3057\u5C04\u7A0B\u304C\u77ED\u3044\n"
+    charaAnim: {fileID: 7400000, guid: 1eedee6da4fe8f3458a82a0b1e848dbc, type: 2}
   - charaName: Male-Solidier
     charaNo: 3
     cost: 200
@@ -49,6 +52,7 @@ MonoBehaviour:
     intervalAttackTime: 200
     maxAttackCount: 2
     discription: "\u5C04\u7A0B\u304C\u9577\u304F\u3001\u653B\u6483\u529B\u3082\u9AD8\u3044\u3002"
+    charaAnim: {fileID: 7400000, guid: 44d59711cf6712749b6791d072f54b58, type: 2}
   - charaName: Male-Wizard
     charaNo: 4
     cost: 500
@@ -58,3 +62,4 @@ MonoBehaviour:
     intervalAttackTime: 1000
     maxAttackCount: 2
     discription: "\u5C04\u7A0B\u3001\u653B\u6483\u529B\u304C\u9AD8\u3044\u304C\u3001\u30B3\u30B9\u30C8\u3082\u9AD8\u304F\u3001\u653B\u6483\u56DE\u6570\u3082\u5C11\u306A\u3044"
+    charaAnim: {fileID: 7400000, guid: aaaa2b3f753ac5d46a54aca9859a925c, type: 2}
