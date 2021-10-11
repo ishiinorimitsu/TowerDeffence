@@ -15,4 +15,6 @@ public class CharaData
 
     [Multiline]
     public string discription;
+
+    public AnimationClip charaAnim;
 }
