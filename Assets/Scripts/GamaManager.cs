@@ -18,12 +18,28 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
 
     public int maxEnemyCount;   //生成する敵の最大数
 
+    public enum GameState
+    {
+        Preparate,      //ゲーム開始前、準備中
+        Play,      //ゲームプレイ中
+        Stop,      //ゲームを一時中断
+        GameUp      //ゲームの終了（クリア、ゲームオーバー両方）
+    }
+
+    public GameState currentGameState;
+
     // Start is called before the first frame update
     void Start()
     {
-        isEnemyGenerate = true;  //生成の許可
+        //ゲームの進行状態を準備中に設定
+        SetGameState(GameState.Preparate);
 
         StartCoroutine(charaGenerator.SetUpCharaGenerter(this));
+
+        isEnemyGenerate = true;  //生成の許可
+
+        // ゲームの進行状態をプレイ中に変更
+        SetGameState(GameState.Play);
 
         StartCoroutine(enemyGenerator.PreparateEnemyGenerate(this));
     }
@@ -40,4 +56,10 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
             isEnemyGenerate = false;
         }
     }
+
+    public void SetGameState(GameState nextGameState)
+    {
+        currentGameState = nextGameState;
+    }
+
 }

@@ -33,8 +33,8 @@ public class CharaGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //マウスが押されてかつ配置キャラのポップアップが非表示状態なら
-        if (Input.GetMouseButtonDown(0) && !placementCharaSelectPopUp.gameObject.activeSelf)
+        //マウスが押されてかつ配置キャラのポップアップが非表示状態ならかつゲームの状態がPlayのときだけ
+        if (Input.GetMouseButtonDown(0) && !placementCharaSelectPopUp.gameObject.activeSelf && gameManager.currentGameState == GamaManager.GameState.Play)
         {
             gridPos = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));　　//マウスがある場所を取得し、それをタイルマップでいうとどこにあたるかの情報をgridPosに代入する。
             
