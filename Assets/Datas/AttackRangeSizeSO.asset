@@ -17,5 +17,5 @@ MonoBehaviour:
     size: {x: 2, y: 2}
   - attackRangeType: 1
     size: {x: 3, y: 3}
-  - attackRangeType: 0
+  - attackRangeType: 2
     size: {x: 4, y: 4}
