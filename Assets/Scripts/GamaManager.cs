@@ -26,6 +26,8 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
         GameUp      //ゲームの終了（クリア、ゲームオーバー両方）
     }
 
+    public List<EnemyController> enemiesList = new List<EnemyController>();
+
     public GameState currentGameState;
 
     // Start is called before the first frame update
@@ -44,8 +46,13 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
         StartCoroutine(enemyGenerator.PreparateEnemyGenerate(this));
     }
 
-    public void AddEnemyList()
+
+
+    public void AddEnemyList(EnemyController enemy)
     {
+        enemiesList.Add(enemy);
+
+        //敵の数をカウント
         generateEnemyCount++;
     }
 
@@ -62,4 +69,24 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
         currentGameState = nextGameState;
     }
 
+    public void PauseEnemies()    //敵を止める
+    {
+        for(int i = 0; i < enemiesList.Count; i++)
+        {
+            enemiesList[i].PauseMove();
+        }
+    }
+
+    public void ResumeEnemies()     //敵を再び動かし始める
+    {
+        for (int i = 0; i < enemiesList.Count; i++)
+        {
+            enemiesList[i].ResumeMove();
+        }
+    }
+
+    public void RemveEnemies(EnemyController removeEnemy)
+    {
+        enemiesList.Remove(removeEnemy);
+    }
 }
