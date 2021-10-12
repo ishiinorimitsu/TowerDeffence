@@ -24,23 +24,26 @@ public class EnemyGenerator : MonoBehaviour
 
         while (gameManager.isEnemyGenerate)
         {
-            timer++;
-
-            if (timer > gameManager.generateIntervalTime)
+            if(gameManager.currentGameState == GamaManager.GameState.Play)
             {
-                timer = 0;
+                timer++;
 
-                GenerateEnemy();
+                if (timer > gameManager.generateIntervalTime)
+                {
+                    timer = 0;
 
-                gameManager.AddEnemyList();  //敵の生成数のカウントアップとリストへの追加
+                    //GenerateEnemy();
 
-                gameManager.JudgeGenerateEnemyEnd();
+                    gameManager.AddEnemyList(GenerateEnemy());  //敵の生成数のカウントアップとリストへの追加
+
+                    gameManager.JudgeGenerateEnemyEnd();
+                }
+                yield return null;
             }
-            yield return null;
         }
     }
 
-    public void GenerateEnemy()
+    public void GenerateEnemy(int generateNo = 0)
     {
         int randomValue = Random.Range(0, pathDatas.Length);
 
@@ -55,6 +58,8 @@ public class EnemyGenerator : MonoBehaviour
 
         // 敵の移動経路のライン表示を生成の準備
         StartCoroutine(PreparateCreatePathLine(paths, enemyController));
+
+        return enemyController;
     }
 
     private IEnumerator PreparateCreatePathLine(Vector3[] paths, EnemyController enemyController)
