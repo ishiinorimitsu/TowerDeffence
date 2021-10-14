@@ -132,3 +132,11 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 6040.807460 seconds.
+  path: Assets/Scripts/GamaManager.cs
+  artifactKey: Guid(08cb77cef15d9834a86ad7c8abbdc188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GamaManager.cs using Guid(08cb77cef15d9834a86ad7c8abbdc188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dae3a49dcf77970efe216ec075e5a07') in 0.651789 seconds 
+  Import took 1.291430 seconds .
+

@@ -84,7 +84,12 @@ public class CharaGenerator : MonoBehaviour
     }
     public void ActivatePlacementCharaSelectPopUp()
     {
+        gameManager.SetGameState(GamaManager.GameState.Stop);       //ゲームの進行状態をゲーム停止に変更
+
+        gameManager.PauseEnemies();     //全ての敵の移動を一時停止
+
         placementCharaSelectPopUp.gameObject.SetActive(true); //ポップアップを表示
+
         placementCharaSelectPopUp.ShowPopUp();
     }
 
@@ -92,6 +97,15 @@ public class CharaGenerator : MonoBehaviour
     {
         //配置キャラ選択用のポップアップを非表示にする
         placementCharaSelectPopUp.gameObject.SetActive(false);
+
+        if(gameManager.currentGameState == GamaManager.GameState.Stop)      //この停止がクリアやゲームオーバーではない場合
+        {
+            //ゲームの状態をPlayにしてゲーム再開
+            gameManager.SetGameState(GamaManager.GameState.Play);
+
+            //敵を再び動かし始める
+            gameManager.ResumeEnemies();
+        }
     }
 
     private void CreateHaveCharaDatasList()   //このメソッドでキャラのデータをこのスクリプト内に取り込んでいる。
