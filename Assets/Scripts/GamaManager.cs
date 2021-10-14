@@ -10,6 +10,9 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
     [SerializeField]
     private CharaGenerator charaGenerator;
 
+    [SerializeField]
+    private UIManager uiManager;
+
     public bool isEnemyGenerate;  //生成するswitch（trueだと生成する　falseだと生成停止）
 
     public int generateIntervalTime;    //何秒おきに作るか
@@ -46,6 +49,8 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
         SetGameState(GameState.Play);
 
         StartCoroutine(enemyGenerator.PreparateEnemyGenerate(this));
+
+        StartCoroutine(TimeToCurrency());
     }
 
 
@@ -108,6 +113,33 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
         if(destroyEnemyCount >= maxEnemyCount)
         {
             Debug.Log("ゲームクリア");
+        }
+    }
+
+    public IEnumerator TimeToCurrency()
+    {
+        int timer = 0;
+        while(currentGameState == GameState.Play)
+        {
+            timer++;
+            Debug.Log("OK1");
+            if (timer >= GameData.instance.currencyIntervalTime && GameData.instance.currency < GameData.instance.maxCurrency)  //一定時間経過ごと＆カレンシーが最大値でなければ
+            {
+
+                Debug.Log("OK2");
+
+                timer = 0;
+
+                //カレンシーの値を指定した範囲内でaddCurrencyPointずつ増やしていく。
+                GameData.instance.currency = Mathf.Clamp(GameData.instance.currency += GameData.instance.addCurrencyPoint, 0, GameData.instance.maxCurrency);
+
+                uiManager.UpdateDisplayCurrency();
+            }
+            else
+            {
+                Debug.Log("ダメ");
+            }
+            yield return null;
         }
     }
 }
