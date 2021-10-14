@@ -53,7 +53,7 @@ public class EnemyGenerator : MonoBehaviour
         Vector3[] paths = pathDatas[randomValue].pathTranArray.Select(x => x.position).ToArray();　　//抽出しただけではなく、配列にしないと使わない状態になってしまう。
 
         //敵キャラの初期設定をして一時停止しておく
-        enemyController.SetUpEnemyController(paths);
+        enemyController.SetUpEnemyController(paths,gameManager);
 
 
         // 敵の移動経路のライン表示を生成の準備
@@ -66,7 +66,9 @@ public class EnemyGenerator : MonoBehaviour
     {
         yield return StartCoroutine(CreatePathLine(paths));
 
-        enemyController.ResumeMove();
+        yield return new WaitUntil(() => gameManager.currentGameState == GamaManager.GameState.Play);       //引数に渡した条件になるまで待機する。
+
+        enemyController.ResumeMove();       //敵の移動を再開
     }
 
     private IEnumerator CreatePathLine(Vector3[] paths)
