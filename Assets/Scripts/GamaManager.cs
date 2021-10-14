@@ -28,6 +28,8 @@ public class GamaManager : MonoBehaviour   //“G‚Ì¶¬‚ğ‚Â‚©‚³‚Ç‚é
 
     public List<EnemyController> enemiesList = new List<EnemyController>();
 
+    private int destroyEnemyCount;
+
     public GameState currentGameState;
 
     // Start is called before the first frame update
@@ -85,8 +87,27 @@ public class GamaManager : MonoBehaviour   //“G‚Ì¶¬‚ğ‚Â‚©‚³‚Ç‚é
         }
     }
 
-    public void RemveEnemies(EnemyController removeEnemy)
+    public void RemoveEnemyList(EnemyController removeEnemy)
     {
         enemiesList.Remove(removeEnemy);
+    }
+
+    public void CountUpDestroyEnemyCount(EnemyController enemyController)
+    {
+        RemoveEnemyList(enemyController);   //List‚©‚ç”j‰ó‚³‚ê‚½“G‚ğíœ‚·‚é
+
+        destroyEnemyCount++;
+
+        Debug.Log("”j‰ó‚µ‚½“G‚Ì”F"+ destroyEnemyCount);   
+
+        JudgeGameClear();   //ƒQ[ƒ€‚ğƒNƒŠƒA‚µ‚Ä‚¢‚é‚©Šm‚©‚ß‚é
+    }
+
+    private void JudgeGameClear()
+    {
+        if(destroyEnemyCount >= maxEnemyCount)
+        {
+            Debug.Log("ƒQ[ƒ€ƒNƒŠƒA");
+        }
     }
 }

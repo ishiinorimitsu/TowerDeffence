@@ -24,13 +24,18 @@ public class EnemyController : MonoBehaviour
 
     private Animator anim;
 
+    private GamaManager gameManager;
+
     public int attackPower;
 
     //private Vector3 currentPos;  //敵キャラの現在の位置
 
-    public void SetUpEnemyController(Vector3[] pathData)
+    public void SetUpEnemyController(Vector3[] pathData,GamaManager gameManager)
     {
+        this.gameManager = gameManager;
+
         Debug.Log("aaa");
+
         hp = maxHp;
 
         TryGetComponent(out anim);  //Animatorコンポーネントを取得してanimに代入
@@ -85,6 +90,10 @@ public class EnemyController : MonoBehaviour
     public void DestroyEnemy()
     {
         tween.Kill();
+
+        // 敵を破壊した数をカウントアップする
+        // さらにこのメソッド内で、敵の情報を管理している List からこの敵の情報を削除もしてもらうために、EnemyController の情報を引数で渡している
+        gameManager.CountUpDestroyEnemyCount(this);
 
         Destroy(gameObject);
     }
