@@ -24,7 +24,7 @@ public class EnemyGenerator : MonoBehaviour
 
         while (gameManager.isEnemyGenerate)
         {
-            if(gameManager.currentGameState == GamaManager.GameState.Play)
+            if (gameManager.currentGameState == GamaManager.GameState.Play)
             {
                 timer++;
 
@@ -38,12 +38,12 @@ public class EnemyGenerator : MonoBehaviour
 
                     gameManager.JudgeGenerateEnemyEnd();
                 }
-                yield return null;
             }
+            yield return null;
         }
     }
 
-    public void GenerateEnemy(int generateNo = 0)
+    public EnemyController GenerateEnemy(int generateNo = 0)
     {
         int randomValue = Random.Range(0, pathDatas.Length);
 
