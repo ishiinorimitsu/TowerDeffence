@@ -122,7 +122,9 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
         while(currentGameState == GameState.Play)
         {
             timer++;
+
             Debug.Log("OK1");
+
             if (timer >= GameData.instance.currencyIntervalTime && GameData.instance.currency < GameData.instance.maxCurrency)  //一定時間経過ごと＆カレンシーが最大値でなければ
             {
 
