@@ -125,6 +125,16 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
 
             Debug.Log("OK1");
 
+            Debug.Log(timer);
+
+            Debug.Log(GameData.instance.currencyIntervalTime);
+
+            Debug.Log(GameData.instance.currency);
+
+            Debug.Log(GameData.instance.maxCurrency);
+
+            Debug.Log("aed");
+
             if (timer >= GameData.instance.currencyIntervalTime && GameData.instance.currency < GameData.instance.maxCurrency)  //一定時間経過ごと＆カレンシーが最大値でなければ
             {
 
