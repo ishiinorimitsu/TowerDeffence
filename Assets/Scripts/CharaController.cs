@@ -62,20 +62,26 @@ public class CharaController : MonoBehaviour　　　//設置したキャラの色々な情報を
 
         while (isAttack)
         {
-            timer++;
-
-            if(timer > intervalAttackTime)
+            if(gamaManager.currentGameState == GamaManager.GameState.Play)
             {
-                timer = 0;
-                Attack();
+                timer++;
 
-                attackCount --;
-
-                UpdateDisplayAttackCount();
-
-                if (attackCount <= 0)
+                if (timer > intervalAttackTime)
                 {
-                    Destroy(gameObject);
+                    timer = 0;
+                    Attack();
+
+                    attackCount--;
+
+                    UpdateDisplayAttackCount();
+
+                    if (attackCount <= 0)
+                    {
+                        Destroy(gameObject);
+
+                        // キャラのリストから情報を削除
+                        gamaManager.RemoveCharaList(this);
+                    }
                 }
             }
             // １フレーム処理を中断する(この処理を書き忘れると無限ループになり、Unity エディターが動かなくなって再起動することになります。注意！)
