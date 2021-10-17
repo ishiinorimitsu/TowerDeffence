@@ -33,14 +33,24 @@ public class CharaGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //もしすでにキャラの数が最大数に達しているときは、何もせずに処理を終える（return）
+        if(gameManager.GetPlacementCharaCount() == GameData.instance.maxCharaPlacementCount)
+        {
+            Debug.Log("OK0");
+            return;
+        }
+
+        Debug.Log("OKa");
         //マウスが押されてかつ配置キャラのポップアップが非表示状態ならかつゲームの状態がPlayのときだけ
         if (Input.GetMouseButtonDown(0) && !placementCharaSelectPopUp.gameObject.activeSelf && gameManager.currentGameState == GamaManager.GameState.Play)
         {
-            gridPos = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));　　//マウスがある場所を取得し、それをタイルマップでいうとどこにあたるかの情報をgridPosに代入する。
-            
-            if(tileMap.GetColliderType(gridPos) == Tile.ColliderType.None)
+            Debug.Log("OKb");
+            gridPos = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));  //マウスがある場所を取得し、それをタイルマップでいうとどこにあたるかの情報をgridPosに代入する。
+
+            Debug.Log("OKc");
+            if (tileMap.GetColliderType(gridPos) == Tile.ColliderType.None)
             {
-                //CreateChara(gridPos);
+                Debug.Log("OKd");
 
                 //配置キャラを選択するポップアップを表示する
                 ActivatePlacementCharaSelectPopUp();
@@ -82,7 +92,7 @@ public class CharaGenerator : MonoBehaviour
 
         yield return null;
     }
-    public void ActivatePlacementCharaSelectPopUp()
+    public void ActivatePlacementCharaSelectPopUp()    //キャラを配置するポップアップを開いた時の処理
     {
         gameManager.SetGameState(GamaManager.GameState.Stop);       //ゲームの進行状態をゲーム停止に変更
 
@@ -93,7 +103,7 @@ public class CharaGenerator : MonoBehaviour
         placementCharaSelectPopUp.ShowPopUp();
     }
 
-    public void InActivePlacementSelectPopUp()
+    public void InActivePlacementSelectPopUp()   //キャラを配置するポップアップを閉じたときの処理
     {
         //配置キャラ選択用のポップアップを非表示にする
         placementCharaSelectPopUp.gameObject.SetActive(false);
@@ -105,6 +115,8 @@ public class CharaGenerator : MonoBehaviour
 
             //敵を再び動かし始める
             gameManager.ResumeEnemies();
+
+            StartCoroutine(gameManager.TimeToCurrency());   //カレンシーの加算処理を再開
         }
     }
 
@@ -117,8 +129,14 @@ public class CharaGenerator : MonoBehaviour
         }
     }
 
-    public void CreateChooseChara(CharaData charaData)
+    public void CreateChooseChara(CharaData charaData)      //何のキャラを配置するかを選択したときに呼び出されるメソッド
     {
+        //コストを支払う
+        GameData.instance.currency -= charaData.cost;
+
+        //カレンシーの画面表示を更新
+        gameManager.uiManager.UpdateDisplayCurrency();
+
         //キャラをタップした位置に生成
         CharaController chara = Instantiate(charaControllerPrefab, gridPos, Quaternion.identity);
 
@@ -128,5 +146,8 @@ public class CharaGenerator : MonoBehaviour
         chara.SetUpChara(charaData, gameManager);
 
         Debug.Log(charaData.charaName);
+
+        //キャラをリストに追加
+        gameManager.AddCharaList(chara);
     }
 }

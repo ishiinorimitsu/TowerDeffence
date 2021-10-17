@@ -106,16 +106,26 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
     public void ShowPopUp()
     {
+        CheckAllCharaButtons();             // 各キャラのボタンの制御
+
         canvasGroup.DOFade(1.0f, 0.5f);
     }
 
-    public void OnClickSubmitChooseChara()
+    public void OnClickSubmitChooseChara()      //配置するキャラのボタンを押したときの処理
     {
+
+        // コストの支払いが可能か最終確認
+        if (chooseCharaData.cost > GameData.instance.currency)
+        {
+            return;
+        }
+
         charaGenerator.CreateChooseChara(chooseCharaData);
+
         HidePopUp();
     }
 
-    public void OnClickClosePopUp()
+    public void OnClickClosePopUp()     //「閉じる」ボタンを押したときの処理
     {
         HidePopUp();
     }
@@ -123,6 +133,8 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
 
     public void HidePopUp()
     {
+        CheckAllCharaButtons();
+
         canvasGroup.DOFade(0, 0.5f).OnComplete(() => { charaGenerator.InActivePlacementSelectPopUp(); });
     }
 
@@ -141,5 +153,17 @@ public class PlacemantCharaSelectPopUp : MonoBehaviour
         txtPickupCharaCost.text = charaData.cost.ToString();
 
         txtPickupCharaMaxAttackCount.text = charaData.maxAttackCount.ToString();
+    }
+
+    public void CheckAllCharaButtons()
+    {
+        if(selectCharaDetailslList.Count > 0)       //配置できるキャラがいる場合のみ処理を行う
+        {
+            // 各キャラのコストとカレンシーを確認して、配置できるかどうかを判定してボタンの押下有無を設定
+            for (int i = 0; i < selectCharaDetailslList.Count; i++)
+            {
+                selectCharaDetailslList[i].ChangeActiveButton(selectCharaDetailslList[i].JudgePermissionCost(GameData.instance.currency));
+            }
+        }
     }
 }

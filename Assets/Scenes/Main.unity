@@ -155,6 +155,7 @@ MonoBehaviour:
   enemyGenerator: {fileID: 1381309480}
   charaGenerator: {fileID: 1517645128}
   uiManager: {fileID: 207184945}
+  charasList: []
   isEnemyGenerate: 0
   generateIntervalTime: 500
   generateEnemyCount: 0
@@ -395,7 +396,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 3.5517657
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -456,8 +457,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currency: 0
   maxCurrency: 1000
-  currencyIntervalTime: 60
+  currencyIntervalTime: 200
   addCurrencyPoint: 100
+  maxCharaPlacementCount: 0
 --- !u!4 &693556239
 Transform:
   m_ObjectHideFlags: 0
@@ -3453,6 +3455,7 @@ MonoBehaviour:
   placementCharaSelectPopUpPrefab: {fileID: 8149454344975522518, guid: 562591fd5aad64d4b83edb8f147cb0d8, type: 3}
   canvasTran: {fileID: 1289389302}
   charaDataList: []
+  gamaManager: {fileID: 0}
 --- !u!4 &1517645129
 Transform:
   m_ObjectHideFlags: 0

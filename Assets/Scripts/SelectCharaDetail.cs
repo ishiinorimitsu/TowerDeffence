@@ -21,15 +21,46 @@ public class SelectCharaDetail : MonoBehaviour　　//キャラを選択する「ボタン」を
         this.placementCharaSelectPop = placemantCharaSelectPop;
         this.charaData = charaData;
 
+        ChangeActiveButton(false);      //ボタンを押せなくする
+
         imgChara.sprite = this.charaData.charaSprite;
 
-        Debug.Log("ここまでOK");  　　//ここまでもできていない=生成の場所とかではなく生成そのものができていない
+        JudgePermissionCost(GameData.instance.currency);       //コストを支払えるかを確認する
 
-        btnSelectCharaDetail.onClick.AddListener(OnClickSelectCharaDetail);
+        btnSelectCharaDetail.onClick.AddListener(OnClickSelectCharaDetail);         //ボタンにメソッドを追加する
+
+        ChangeActiveButton(true);       //ボタンを押せるようにする
     }
     // Start is called before the first frame update
     private void OnClickSelectCharaDetail()
     {
         placementCharaSelectPop.SetSelectCharaDetail(charaData);
     }
+
+    public void ChangeActiveButton(bool isSwitch)
+    {
+        btnSelectCharaDetail.interactable = isSwitch;
+    }
+
+    public bool JudgePermissionCost(int value)
+    {
+        Debug.Log("コスト確認");
+
+        if(charaData.cost <= value)     //コストを支払える場合
+        {
+            ChangeActiveButton(true);       //ボタンを押せるようにする
+            return true;
+        }
+        return false;
+    }
+
+    public bool GetActiveButtonState()
+    {
+        return btnSelectCharaDetail.interactable;
+    }
+
+    //public CharaData GetCharaData()
+    //{
+    //    retutn charaData;
+    //}
 }

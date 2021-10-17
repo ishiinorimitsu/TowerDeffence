@@ -10,8 +10,10 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
     [SerializeField]
     private CharaGenerator charaGenerator;
 
+    public UIManager uiManager;
+
     [SerializeField]
-    private UIManager uiManager;
+    private List<CharaController> charasList = new List<CharaController>();     //  配置するキャラの情報を一括管理
 
     public bool isEnemyGenerate;  //生成するswitch（trueだと生成する　falseだと生成停止）
 
@@ -29,7 +31,7 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
         GameUp      //ゲームの終了（クリア、ゲームオーバー両方）
     }
 
-    public List<EnemyController> enemiesList = new List<EnemyController>();
+    public List<EnemyController> enemiesList = new List<EnemyController>();     //敵の情報を一括管理
 
     private int destroyEnemyCount;
 
@@ -123,18 +125,6 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
         {
             timer++;
 
-            Debug.Log("OK1");
-
-            Debug.Log(timer);
-
-            Debug.Log(GameData.instance.currencyIntervalTime);
-
-            Debug.Log(GameData.instance.currency);
-
-            Debug.Log(GameData.instance.maxCurrency);
-
-            Debug.Log("aed");
-
             if (timer >= GameData.instance.currencyIntervalTime && GameData.instance.currency < GameData.instance.maxCurrency)  //一定時間経過ごと＆カレンシーが最大値でなければ
             {
 
@@ -147,11 +137,23 @@ public class GamaManager : MonoBehaviour   //敵の生成をつかさどる
 
                 uiManager.UpdateDisplayCurrency();
             }
-            else
-            {
-                Debug.Log("ダメ");
-            }
             yield return null;
         }
+    }
+
+    public void AddCharaList(CharaController chara)
+    {
+        charasList.Add(chara);
+    }
+
+    public void RemoveCharaList(CharaController chara)
+    {
+        Destroy(chara.gameObject);
+        charasList.Remove(chara);
+    }
+
+    public int GetPlacementCharaCount()
+    {
+        return charasList.Count;
     }
 }

@@ -18,6 +18,8 @@ public class GameData : MonoBehaviour
     [Header("ƒJƒŒƒ“ƒV[‚ª‚¢‚­‚Â‚Ã‚Â‘‚¦‚é‚©")]
     public int addCurrencyPoint;
 
+    public int maxCharaPlacementCount;
+
     private void Awake()
     {
         if(instance == null)
